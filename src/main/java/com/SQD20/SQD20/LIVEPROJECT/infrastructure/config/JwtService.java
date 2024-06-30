@@ -59,6 +59,7 @@ public class JwtService {
     }
     //this method help us validate that the token belongs to the right person
     public boolean validateToken(String token){
+
         try {
             Jwts.parser()
                     .setSigningKey(getSigningKey())
@@ -72,6 +73,7 @@ public class JwtService {
     }
 
     public String extractUsernameFromToken(String token) {
+
 
         String jwtToken = token.replace("Bearer ", "");
 
